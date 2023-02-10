@@ -2,7 +2,7 @@
 // const forecast = require('../../src/utils/forecast')
 
 const fetchForecast = (address, callback) => {
-    fetch('http://127.0.0.1:3000/weather?address='+address).then((response) => {
+    fetch('https://chocolate-clownfish-gown.cyclic.app/weather?address='+address).then((response) => {
         response.json().then((data) => {
             // console.log(data)
             let messageOne_copy
@@ -28,7 +28,7 @@ const messageTwo = document.querySelector('#message-2')
 
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
-
+    
     const location = search.value
 
     messageOne.textContent = 'Loading...'
