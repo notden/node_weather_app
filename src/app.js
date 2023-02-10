@@ -3,6 +3,7 @@ const express = require('express')
 const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
+const cors = require('cors');
 
 const app = express()
 
@@ -14,6 +15,7 @@ app.set('views', viewsPath)
 hbs.registerPartials(partialsPath)
 
 app.use(express.static(path.join(__dirname, '../public')))
+app.use(cors());
 
 app.get('', (req, res) => {
     res.render('index', {

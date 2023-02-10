@@ -15,6 +15,7 @@ const fetchForecast = (address, callback) => {
                 messageOne_copy = data.location
                 messageTwo_copy = data.forecast
             }
+            messageOne.textContent = 'asds'
             callback(messageOne_copy, messageTwo_copy)
         })
     })
